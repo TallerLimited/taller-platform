@@ -1,0 +1,504 @@
+/*#onboarding
+{
+    opacity: 1;
+    transition: opacity 1s ease-out;
+}
+
+#onboarding.fade-out
+{
+    opacity: 0;
+}
+
+#input-box, #birthday-input-box, #ethnicity-input-box, #tailor-measurements-input-box,
+#height-weight-input-box, #clothing-measurements-input-box
+{
+  width: 40%;
+  margin: auto;
+  text-align: center;
+  color: rgb(172, 172, 172);
+}
+
+#tailor-measurements-input-box
+{
+    width: 100%;
+}
+
+#birthday-input-box input
+{
+    color: black;
+}
+
+#clothing-measurements-input-box
+{
+    margin-top: 20px;
+}
+
+#ethnicity-input-box
+{
+    padding-top: 25px;
+}
+
+#ethnicity-input-box .form-select
+{
+    width: 100%;
+    text-align: center;
+    background-color: transparent;
+    color: white;
+    border: none;
+}
+
+#ethnicity-input-box .form-select:focus{
+    box-shadow: none;
+    outline: none;
+}
+
+#gender-input-box
+{
+    padding-top: 25px;
+}
+
+#gender-input-box .form-select
+{
+    width: 100%;
+    text-align: center;
+    background-color: transparent;
+    color: white;
+    border: none;
+}
+
+#gender-input-box .form-select:focus{
+    box-shadow: none;
+    outline: none;
+}
+
+#tailor-measurements-container
+{
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#clothing-measurements-container
+{
+    width: 65%;
+}
+
+#tailor-measurements-input-box
+{
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+#tailor-measurements-input-box label
+{
+    display: inline;
+    margin-right: 25px;
+}
+
+#tailor-measurements-input-box div input, #clothing-measurements-input-box div input
+{
+    display: inline;
+    width: 70px;
+    height: 30px;
+    margin-left: 25px;
+    background-color: transparent;
+}
+
+#clothing-measurements-input-box div input
+{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+#tailor-measurements-input-box div input:focus, #clothing-measurements-input-box div input
+{
+    box-shadow: none;
+    border-color: rgb(255, 187, 79);
+    outline-color: transparent;
+}
+
+#tailor-measurements-input-box div p
+{
+    display: inline;
+    margin-left: 12px;
+}
+
+#fullname, #birthday, #gender, #ethnicity, #tailor-measurements, #height-weight, #clothing-measurements
+{
+    position: relative;
+    height: 55vh;
+}
+
+#qform-sec-header
+{
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    color: rgb(208, 208, 208);
+    animation: fadeInOutAnimation ease 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    position: absolute;
+    top: 45vh;
+    left: 0;
+}
+
+#qform-subtitle
+{
+    width: 100%;
+    margin: auto;
+    font-size: 20px;
+    text-align: center;
+    color: rgb(172, 172, 172);
+    padding-bottom: 2.5vh;
+}
+
+
+@keyframes fadeInOutAnimation
+{
+    0%
+    {
+        opacity: 0;
+    }
+
+    25%
+    {
+        opacity: 1;
+    }
+
+    75%
+    {
+        opacity: 1;
+    }
+
+    100%
+    {
+        opacity: 0;
+    }
+}
+
+#name-input-group
+{
+    position: absolute;
+    z-index: 2;
+    top: 37vh;
+    left: 0;
+    animation: fadeInAnimation ease 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    animation-delay: 5s;
+}
+
+#birthday-input-group, #gender-input-group, #ethnicity-input-group, #tailor-measurements-input-group,
+#height-weight-input-group
+{
+    position: absolute;
+    z-index: 2;
+    top: 37vh;
+    left: 0;
+    animation: fadeInAnimation ease 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+#gender-input-group
+{
+    top: 42vh;
+}
+
+#tailor-measurements-input-group
+{
+    top: 30vh;
+}
+
+#gender-input-group #qform-subtitle
+{
+    padding-bottom: 0;
+}
+
+@keyframes fadeInAnimation
+{
+    0%
+    {
+        opacity: 0;
+    }
+
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+#fname-input, #lname-input
+{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#fname, #lname
+{
+    background-color: transparent;
+    border: none;
+    border-bottom-style: solid;
+    border-radius: 0px;
+    border-width: 0.05px;
+    border-color: rgb(131, 124, 113);
+    color: white;
+}
+
+#fname:focus, #lname:focus
+{
+    box-shadow: none;
+}
+
+#fname::placeholder, #lname::placeholder
+{
+    color: rgb(180, 180, 180);
+}
+
+
+#lname-input
+{
+    padding-top: 2vh;
+}
+
+.form-group
+{
+    margin:0px 0px 3px 0px
+}
+
+input::placeholder, .form-control
+{
+    font-size: smaller;
+    font: 1.25 sans-serif;
+    text-align: center;
+}
+
+#container-submit-button, #clothing-measurements-container-submit-button-container
+{
+    margin-top: 10vh !important;
+    padding-top: 7vh;
+    padding-bottom: 5vh;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#container-submit-button
+{
+    flex-direction: row;
+}
+
+#tailor-measurements-submit-button-container
+{
+    margin-top: 14vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#tailor-measurements-submit-button-container button
+{
+    margin-top: 10px;
+}
+
+#tailor-measurements-submit-button-alt
+{
+    margin-top: 10px;
+}
+
+#name-submit-button
+{
+    background-color: transparent;
+    color: rgb(172, 172, 172);
+    font-weight: 400;
+    font-size: 14px;
+    border-color: rgb(131, 124, 113);
+    border-radius: 10px;
+    width: 125px;
+    text-shadow: silver;
+    animation: fadeInAnimation ease 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    animation-delay: 5s;
+}
+
+#name-submit-button:focus, #birthday-submit-button:focus, #ethnicity-submit-button:focus, 
+#tailor-measurements-submit-button:focus, #height-weight-submit-button:focus
+{
+    box-shadow: none;
+}
+
+#birthday-submit-button, #ethnicity-submit-button, #tailor-measurements-submit-button, 
+#tailor-measurements-submit-button-alt, #height-weight-submit-button, #clothing-measurements-submit-button
+{
+    background-color: transparent;
+    color: rgb(172, 172, 172);
+    font-weight: 400;
+    font-size: 14px;
+    border-color: rgb(131, 124, 113);
+    border-radius: 10px;
+    width: 125px;
+    text-shadow: silver;
+    animation: fadeInAnimation ease 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#tailor-measurements-submit-button
+{
+    width: 125px;
+}
+
+#tailor-measurements-container-submit-button button
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    margin-top: 10px;
+}
+
+#tailor-measurements-submit-button-alt
+{
+    width: 250px !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#clothing-measurements-submit-button
+{
+    margin-top: 22svh;
+    width: 125px;
+}
+
+#birthday-input-box .react-datepicker-ignore-onclickoutside
+{
+    text-align: center;
+    background-color: transparent;
+    border-style: none;
+}
+
+#gender-submit-button
+{
+    background-color: transparent;
+    color: rgb(172, 172, 172);
+    font-weight: 400;
+    font-size: 14px;
+    border-color: rgb(131, 124, 113);
+    border-radius: 10px;
+    width: 100px;
+    text-shadow: silver;
+    animation: fadeInAnimation ease 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    display: inline;
+}
+
+#ft-value, #in-value, #lbs-value
+{
+    display: inline;
+    background-color: transparent;
+    border-color: rgb(174, 141, 95);
+    width: 50px;
+    height: 30px;
+    color: white;
+}
+
+#lbs-value
+{
+    width: 100px;
+}
+
+#in-value
+{
+    margin-left: 15px;
+}
+
+#pants-measurements-group
+{
+    display: flex;
+    justify-content: center;
+}
+
+#pants-measurements-group p
+{
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+}
+
+#shoes-measurements-group
+{
+    display: flex;
+    justify-content: center;
+}
+
+#shoes-measurements-group p
+{
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+}
+
+#height-input-unit-ft, #height-input-unit-in, #weight-input-unit-lbs
+{
+    display: inline;
+    font-size: 16px;
+    margin-left: 7px;
+}
+
+#height-input-box input::-webkit-outer-spin-button, #height-input-box input::-webkit-inner-spin-button,
+#weight-input-box input::-webkit-outer-spin-button, #weight-input-box input::-webkit-inner-spin-button,
+#pants-measurements-group input::-webkit-outer-spin-button, #pants-measurements-group input::-webkit-outer-spin-button
+{
+    -webkit-appearance: none !important;
+}
+
+#pants-waist-measurement-value, #pants-inseam-measurement-value, #shoes-measurement-value
+{
+    color: white;
+}
+
+#pants-waist-measurement-value::-webkit-outer-spin-button, 
+#pants-waist-measurement-value::-webkit-inner-spin-button,
+#pants-inseam-measurement-value::-webkit-outer-spin-button,
+#pants-inseam-measurement-value::-webkit-inner-spin-button,
+#shoes-measurement-value::-webkit-outer-spin-button,
+#shoes-measurement-value::-webkit-inner-spin-button
+{
+    -webkit-appearance: none;
+}
+
+#weight-input-box
+{
+    margin-top: 10px;
+}
+
+input
+{
+    color: white;
+}
+
+#shoes-measurement-value
+{
+    margin-right: 50.5px;
+}
+
+#input-unit-group input
+{
+    color: white;
+}
+
+#input-unit-group input::-webkit-outer-spin-button,
+#input-unit-group input::-webkit-inner-spin-button
+{
+    -webkit-appearance: none;
+}*/

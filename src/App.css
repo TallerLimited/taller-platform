@@ -1,0 +1,107 @@
+@media (min-width: 992px) 
+{
+  .w-lg-50
+  {
+    width: 50% !important;
+  }
+
+  .w-lg-60
+  {
+    width: 60% !important;
+  }
+
+  .w-lg-70
+  {
+    width: 70% !important;
+  }
+
+  .position-lg-sticky
+  {
+    position: sticky !important;
+  }
+}
+
+.page-wrapper
+{
+  flex: 1 0 auto;
+  animation: FadeInOnLoad ease 0.3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes FadeInOnLoad
+{
+  0%
+  {
+    opacity: 0;
+  }
+
+  100%
+  {
+    opacity: 1;
+  }
+}
+
+/* Background properties */
+.bg-repeat-0
+{
+  background-repeat: no-repeat !important;
+}
+
+.bg-position-center
+{
+  background-position: center !important;
+}
+
+.bg-size-cover
+{
+  background-size: cover !important;
+}
+
+/* Font properties */
+.fs-lg
+{
+  font-size: calc(1rem * 1.125) !important;
+}
+
+.fs-sm
+{
+  font-size: calc(1rem * 0.875) !important
+}
+
+.fs-xs
+{
+  font-size: calc(1rem * 0.75) !important;
+}
+
+/* Offcanvas properties */
+.offcanvas-body
+{
+  display: block !important;
+}
+
+#form-background-image
+{ 
+  background-image: url('background.jpeg');
+}
+
+#card-col
+{
+  min-width: 19rem;
+}
+
+#price-card
+{
+  border-radius: 20px;
+}
+
+#card-inner
+{
+  max-width: 23rem;
+}
+
+/* Navbar properties */
+#nav-items
+{
+  --ar-scroll-height: 520px;
+}

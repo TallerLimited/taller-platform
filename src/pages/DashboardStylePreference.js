@@ -87,7 +87,7 @@ function DashboardStylePreference()
                                         </div>
                                     </div>
                                 </div>
-                                {
+                                {/* {
                                     userData.HasUserPreRegistered ? (
                                         <>
                                             <div className = "row py-4 mb-2 mb-sm-3">
@@ -178,7 +178,83 @@ function DashboardStylePreference()
                                             </div>
                                         </div>
                                     )
-                                }
+                                } */}
+                                <div className = "row py-4 mb-2 mb-sm-3">
+                                    <div className = "col-md-6 mb-4 mb-md-0">
+                                        <h5 className = "h4">Tailor Measurements</h5>
+                                        <table class = "table mb-0">
+                                            <tbody>
+                                                <tr>
+                                                    <td className = "border-0 text-body-secondary py-1 px-0">Neck</td>
+                                                    <td className = "border-0 text-dark fw-medium py-1 ps-3">{userData._Tailor_Measurements_Neck}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td className = "border-0 text-body-secondary py-1 px-0">Chest</td>
+                                                    <td className = "border-0 text-dark fw-medium py-1 ps-3">{userData._Tailor_Measurements_Chest}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td className = "border-0 text-body-secondary py-1 px-0">Sleeves</td>
+                                                    <td className = "border-0 text-dark fw-medium py-1 ps-3">{userData._Tailor_Measurements_Sleeves}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td className = "border-0 text-body-secondary py-1 px-0">Waist</td>
+                                                    <td className = "border-0 text-dark fw-medium py-1 ps-3">{userData._Tailor_Measurements_Waist}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td className = "border-0 text-body-secondary py-1 px-0">Hips</td>
+                                                    <td className = "border-0 text-dark fw-medium py-1 ps-3">{userData._Tailor_Measurements_Hips}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td className = "border-0 text-body-secondary py-1 px-0">Inseam</td>
+                                                    <td className = "border-0 text-dark fw-medium py-1 ps-3">{userData._Tailor_Measurements_Inseam}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div className = "col-md-6 mb-4 mb-md-0">
+                                        <h5 className = "h4">Style preference</h5>
+                                        <table className = "table mb-0">
+                                            <tbody>
+                                                <tr>
+                                                    <td className = "border-0 text-body-secondary py-1 px-0">Style Preference</td>
+                                                    <td className = "border-0 text-dark fw-medium py-1 ps-3">{userData.Style_Preference}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td className = "border-0 text-body-secondary py-1 px-0">Style Recommendations</td>
+                                                    <td className = "border-0 text-dark fw-medium py-1 ps-3">{userData.Style_Recommendation}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td className = "border-0 text-body-secondary py-1 px-0">Color Preference</td>
+                                                    <td className = "border-0 text-dark fw-medium py-1 ps-3">{userData.Color}</td>
+                                                </tr>
+                                                <tr>
+                                                    <img src = {userColorPref} className = "w-100 img-fluid float-end" alt = "User color choice"></img>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div className = "row py-4 mb-2 mb-sm-3">
+                                    <div className = "col-md-6 mb-4 mb-md-0">
+                                        <h5 className = "h4">Activies and Hobbies</h5>
+                                        <table className = "table mb-0">
+                                            <tbody>
+                                                <tr>
+                                                    <td className = "border-0 text-body-secondary py-1 px-0">Occupation</td>
+                                                    <td className = "border-0 text-dark fw-medium py-1 ps-3">{userData.Occupation}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td className = "border-0 text-body-secondary py-1 px-0">Sports</td>
+                                                    <td className = "border-0 text-dark fw-medium py-1 ps-3">{userData.Sports}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td className = "border-0 text-body-secondary py-1 px-0">Hobbies</td>
+                                                    <td className = "border-0 text-dark fw-medium py-1 ps-3">{userData.Hobbies}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
                             </div>
                         </section>
                         <button className = "d-lg-none btn btn-sm btn-primary w-100 rounded-0 fixed-bottom" type = "button" data-bs-toggle = "offcanvas" data-bs-target = "#sidebarAccount">

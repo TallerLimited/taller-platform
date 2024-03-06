@@ -129,19 +129,6 @@ function Dashboard()
                                             </tbody>
                                         </table>
                                     </div>
-                                    {
-                                        userData.HasUserPreRegistered ? (
-                                            <></>
-                                        ) : 
-                                        (
-                                            <div className = "col-md-6 d-md-flex justify-content-center">
-                                                <div className = "w-100 border rounded-3 p-4">
-                                                    <h4 className = "h5 lh-base mb-3">Preregister now to gain full access</h4>
-                                                    <a className = "btn btn-primary btn-sm" href = "pricing">Preregister</a>
-                                                </div>
-                                            </div>
-                                        )
-                                    }
                                 </div>
                             </div>
                         </section>

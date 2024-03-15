@@ -11,6 +11,7 @@ function SignIn()
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     // const [firstTimeSignIn, setFirstTimeSignIn] = useState();
+    const [errorMessage, setErrorMessage] = useState();
     
     const navigate = useNavigate();
 
@@ -56,6 +57,9 @@ function SignIn()
         } 
         catch (error)
         {
+            const errorMessage = "Invalid email or password"
+            console.log(errorMessage);
+            setErrorMessage(errorMessage);
             console.log("Error signing in: ", error.message)
         }
 
@@ -73,6 +77,13 @@ function SignIn()
                         </p>
                         <form className = "needs-validation" onSubmit = {handleSignIn}>
                             <div className = "mb-3 pb-3">
+                                {
+                                    errorMessage && (
+                                        <div className = "alert alert-danger" role = "alert">
+                                            {errorMessage}
+                                        </div>
+                                    )
+                                }
                                 <div className = "position-relative">
                                     <i className = "bi bi-envelope fs-lg position-absolute top-50 start-0 translate-middle-y ms-3"></i>
                                     <input className = "form-control form-control-lg ps-5" type = "email" placeholder = "Email address" required onChange = {(e) => setEmail(e.target.value)}></input>

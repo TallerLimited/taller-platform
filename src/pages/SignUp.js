@@ -12,6 +12,7 @@ function SignUp()
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
     const [firstTimeSignIn, setFirstTimeSignIn] = useState("");
+    const [errorMessage, setErrorMessage] = useState();
 
     const handleGoogleSignUp = async (e) =>
     {
@@ -44,6 +45,9 @@ function SignUp()
         } 
         catch (error)
         {
+            const errorMessage = "An account with the same email already exists."
+            console.log(errorMessage);
+            setErrorMessage(errorMessage);
             console.error(error.message);
         }
     }
@@ -60,6 +64,7 @@ function SignUp()
             const userDocRef = doc(collection(firestore, "UserData"), user.uid);
             const userDocSnap = await getDoc(userDocRef);
 
+
             if (!userDocSnap.exists()) 
             {
                 setFirstTimeSignIn(true);
@@ -68,7 +73,6 @@ function SignUp()
                 });
                 navigate('/onboarding-general-info', {replace: true});
             }
-
             if (!firstTimeSignIn)
             {
                 await setDoc(userDocRef, {
@@ -78,7 +82,10 @@ function SignUp()
             }
         } 
         catch (error)
-        {
+        {   
+            const errorMessage = "Invalid email, or account already exists"
+            console.log(errorMessage);
+            setErrorMessage(errorMessage);
             console.log("Error signing in: ", error.message);
         }
 
@@ -99,6 +106,13 @@ function SignUp()
                                 {/*<div className = "col mb-4">
                                     <input className = "form-control form-control-lg" type = "text" placeholder = "Your name" required></input>
                                 </div>*/}
+                                {
+                                    errorMessage && (
+                                        <div className = "alert alert-danger" role = "alert">
+                                            {errorMessage}
+                                        </div>
+                                    )
+                                }
                                 <div className = "col mb-4">
                                     <input className = "form-control form-control-lg" type = "text" placeholder = "Email address" required onChange = {(e) => setEmail(e.target.value)}></input>
                                 </div>

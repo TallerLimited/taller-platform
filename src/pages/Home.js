@@ -4,8 +4,9 @@ import { useNavigate } from 'react-router-dom';
 import PreSignInNav from './PreSignInNav';
 import PostSignInNav from './PostSignInNav'
 import logo from '../logo_design_1.png'
-import thumbnail1 from '../thumbnail-1.png'
-import video from '../video.mp4'  
+// import thumbnail1 from '../thumbnail-1.png'
+// import video from '../video.mp4'  
+// import { createUserWithEmailAndPassword } from 'firebase/auth';
 
 
 function Home()
@@ -41,27 +42,16 @@ function Home()
                 <section className = "overflow-hidden">
                     <div className = "container pt-2 pt-sm-4 pb-sm-2 pb-md-4 py-xl-5 mt-5">
                         <div className = "row align-items-center py-5 mt-md-2 my-lg-3 my-xl-4 my-xxl-5">
-                            <div className = "col-lg-7 order-lg-2 d-flex justify-content-center justify-content-lg-end mb-4 mb-md-5 mb-lg-0 pb-3 pb-md-0">
-                                <iframe
-                                    width = "100%"
-                                    height = "325"
-                                    src = {video}
-                                    title = "Your Embedded Video"
-                                    frameBorder="0"
-                                    allow = "autoplay; encrypted-media"
-                                    allowFullScreen
-                                    autoPlay
-                                ></iframe>
-                            </div>
-                            <div className = "col-lg-5 order-lg-1">
-                                <h1 className = "display-3 text-center text-lg-start pb-sm-2 pb-md-3">
-                                    <span>Discover a World</span>
-                                    <span className = "text-info fw-bold"> Tailored for You</span>
+                            <div className = "col-lg order-lg">
+                                <h1 className = "display-3 text-center  pb-sm-2 pb-md-3">
+                                    <span>Discover a World</span>                                    
                                 </h1>
-                                <p className = "fs-lg text-center text-lg-start pb-xl-2 mx-auto mx-lg-0 mb-5">
+                                <h1 className = "text-center display-3">
+                                    <span className = "text-info ">Tailored for You</span></h1>
+                                <p className = "fs-lg text-center pb-xl-2 mx-auto mx-lg-0 mb-5">
                                     Your Height, Your Strength - Join us and shape the future
                                 </p>
-                                <div className = "d-flex justify-content-center mx-auto mx-lg-0" style = {{maxWidth: 420}}>
+                                <div className = "d-flex justify-content-center mx-auto mx-lg-0">
                                     {
                                         userEmail ? (
                                             <button className = "btn btn-primary" type = "button" onClick = {handleDashboardRouting}>Go to your dashboard</button>
@@ -74,7 +64,7 @@ function Home()
                         </div>
                     </div>
                 </section>
-                <section className = "overflow-hidden">
+                {/* <section className = "overflow-hidden">
                     <div className = "container pt-2 pt-sm-4 pb-sm-2 pb-md-4 py-xl-5 mt-5">
                         <div className = "row align-items-center py-5 mt-md-2 my-lg-3 my-xl-4 my-xxl-5">
                             <div className = "col-lg-6 order-lg-2 d-flex justify-content-center justify-content-lg-end ms-lg-3 mb-4 mb-md-5 mb-lg-0 pb-3 pb-md-0">
@@ -93,7 +83,7 @@ function Home()
                             </div>
                         </div>
                     </div>
-                </section>
+                </section> */}
                 <section className = "container py-5">
                     <h2 className  = "h1 text-center">The Taller Experience</h2>
                     <p className = "text-center pb-4 mb-2 mb-lg-3 mx-auto" style = {{maxWidth: 998}}>Being tall can sometimes be frustrating when it comes to finding QoL(Quality of Life) 
@@ -158,7 +148,7 @@ function Home()
                                 <a className = "btn btn-secondary btn-icon btn-sm btn-facebook rounded-circle mt-3 ms-3" href = "https://www.facebook.com/tallerthebrand/" aria-label = "Facebook">
                                     <i className = "bi bi-facebook"></i>
                                 </a>
-                                <a className = "btn btn-secondary btn-icon btn-sm btn-instagram rounded-circle mt-3 ms-3" href = "https://www.instagram.com/tallerthebrand/" aria-label = "Instagram">
+                                <a className = "btn btn-secondary btn-icon btn-sm btn-instagram rounded-circle mt-3 ms-3" href = "https://www.instagram.com/taller_limited//" aria-label = "Instagram">
                                     <i className = "bi bi-instagram"></i>
                                 </a>
                                 <a className = "btn btn-secondary btn-icon btn-sm btn-linkedin rounded-circle mt-3 ms-3" href = "https://www.linkedin.com/company/taller-limited/" aria-label = "LinkedIn">
